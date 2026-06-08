@@ -1,3 +1,10 @@
+// server.js
+// import 'dotenv/config' is a SPECIAL LINE of code that tells Node.js to load the .env file into the process.env object.
+// It is not a function you call - importing it executes dotenv automatically
+// It reads .env file & loads every key=value pair into process.env
+// MUST be very first import - before anything else reads process.env
+import 'dotenv/config';
+
 import express from 'express';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
@@ -11,11 +18,7 @@ const __dirname = dirname(__filename);
 
 const app = express();
 
-/*
-Challenge:
-  1. Push this code to GitHub.
-  hint.md for git command help.
-*/
+
 
 if (process.env.NODE_ENV === 'production'){
   app.use(helmet());
