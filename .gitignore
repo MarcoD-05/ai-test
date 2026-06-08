@@ -2,3 +2,5 @@ logs
 *.log
 mode_modules
 .env
+echo "node_modules/"
+echo "dreams.db"
